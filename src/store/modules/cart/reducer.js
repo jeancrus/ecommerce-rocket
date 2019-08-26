@@ -6,7 +6,10 @@ export default function cart(state = [], action) {
       // return [...state, { ...action.product, amount: 1 }];
       return produce(state, draft => {
         const { product } = action;
+        console.tron.log(draft);
+
         draft.push(product);
+        console.tron.log(draft);
       });
     case '@cart/REMOVE':
       return produce(state, draft => {
